@@ -1,4 +1,4 @@
-The tech stack used for this project: Python, NiceGUI, Gemini API
+The tech stack used for this project: 
 
 Objective:
 
