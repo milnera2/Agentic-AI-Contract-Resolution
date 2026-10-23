@@ -15,11 +15,11 @@ flowchart TD
     W --> M
     M --> O
 
-    style H fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
-    style S fill:#ffcc80,stroke:#bf360c,stroke-width:2px
-    style W fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
-    style M fill:#f8bbd0,stroke:#ad1457,stroke-width:2px
-    style O fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
+    style H fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style S fill:#ffcc80,stroke:#bf360c,stroke-width:2px,color:#000000
+    style W fill:#bbdefb,stroke:#0d47a1,stroke-width:2px,color:#000000
+    style M fill:#f8bbd0,stroke:#ad1457,stroke-width:2px,color:#000000
+    style O fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px,color:#000000
 ```
 
 ## Detailed Workflow
@@ -51,14 +51,14 @@ flowchart TD
     Interpret --> DL
     Msg --> DL
 
-    style H fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
-    style S fill:#ffcc80,stroke:#bf360c,stroke-width:2px
-    style OCR fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
-    style Split fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
-    style Interpret fill:#f8bbd0,stroke:#ad1457,stroke-width:2px
-    style Msg fill:#e1bee7,stroke:#4a148c,stroke-width:2px
-    style FE fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
-    style DL fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
+    style H fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style S fill:#ffcc80,stroke:#bf360c,stroke-width:2px,color:#000000
+    style OCR fill:#bbdefb,stroke:#0d47a1,stroke-width:2px,color:#000000
+    style Split fill:#bbdefb,stroke:#0d47a1,stroke-width:2px,color:#000000
+    style Interpret fill:#f8bbd0,stroke:#ad1457,stroke-width:2px,color:#000000
+    style Msg fill:#e1bee7,stroke:#4a148c,stroke-width:2px,color:#000000
+    style FE fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px,color:#000000
+    style DL fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px,color:#000000
 ```
 
 ---
