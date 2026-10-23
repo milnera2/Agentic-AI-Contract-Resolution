@@ -4,40 +4,40 @@
 
 ```mermaid
 flowchart TD
-    H["Human + Info Needed<br/>Upload PDF contract<br/>Enter rules/concerns"]
-    S["Supervisor Agent 0<br/>Coordinate workers"]
-    W["Worker Agents<br/>OCR → Split → Interpret<br/>(Agent 1, 2, 3)"]
-    M["Agent 4 — Messenger<br/>Generate PDF report"]
-    O["Frontend Output<br/>Review & Download"]
+    H["1. Human +<br/>Info Needed<br/>Upload PDF<br/>contract<br/>Enter rules/<br/>concerns"]
+    S["2. Supervisor<br/>Agent 0<br/>Coordinate<br/>workers"]
+    W["3. Worker<br/>Agents<br/>OCR → Split →<br/>Interpret<br/>(Agent 1, 2, 3)"]
+    M["4. Agent 4 —<br/>Messenger<br/>Generate PDF<br/>report"]
+    O["5. Frontend<br/>Output<br/>Review &<br/>Download"]
 
     H --> S
     S --> W
     W --> M
     M --> O
 
-    style H fill:#e1f5e1,stroke:#2e7d32
-    style S fill:#fff3e0,stroke:#f57c00
-    style W fill:#e3f2fd,stroke:#1565c0
-    style M fill:#fce4ec,stroke:#c2185b
-    style O fill:#e8f5e9,stroke:#2e7d32
+    style H fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
+    style S fill:#ffcc80,stroke:#bf360c,stroke-width:2px
+    style W fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
+    style M fill:#f8bbd0,stroke:#ad1457,stroke-width:2px
+    style O fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
 ```
 
 ## Detailed Workflow
 
 ```mermaid
 flowchart TD
-    H["1. Human + Info Needed<br/>Upload contract PDF<br/>Enter company rules/concerns<br/>Check 'Include decision log'"]
+    H["1. Human +<br/>Info Needed<br/>Upload contract<br/>PDF<br/>Enter company<br/>rules/concerns<br/>Check 'Include<br/>decision log'"]
 
-    S["2. Supervisor Agent 0<br/>Pre-flight: Check Ollama running<br/>Coordinate worker agents<br/>Log all decisions"]
+    S["2. Supervisor<br/>Agent 0<br/>Pre-flight:<br/>Check Ollama<br/>running<br/>Coordinate<br/>workers<br/>Log all<br/>decisions"]
 
-    OCR["3. Agent 1 — OCR<br/>Extract text from PDF<br/>(pymupdf + OCR fallback)"]
-    Split["4. Agent 2 — Split<br/>Segment into clauses"]
-    Interpret["5. Agent 3 — Interpret<br/>Compare vs rules/concerns<br/>llama3.1 via Ollama<br/>20s timeout, 1 retry<br/>Max 2 concurrent"]
-    Msg["6. Agent 4 — Messenger<br/>Generate PDF report<br/>Unicode-safe sanitize_text<br/>Timestamped filename"]
+    OCR["3. Agent 1 —<br/>OCR<br/>Extract text<br/>from PDF<br/>(pymupdf +<br/>OCR fallback)"]
+    Split["4. Agent 2 —<br/>Split<br/>Segment into<br/>clauses"]
+    Interpret["5. Agent 3 —<br/>Interpret<br/>Compare vs<br/>rules/concerns<br/>llama3.1 via<br/>Ollama<br/>20s timeout,<br/>1 retry<br/>Max 2<br/>concurrent"]
+    Msg["6. Agent 4 —<br/>Messenger<br/>Generate PDF<br/>report<br/>Unicode-safe<br/>sanitize_text<br/>Timestamped<br/>filename"]
 
-    FE["7. Frontend Output<br/>Display flagged/OK cards<br/>Download report<br/>Decision log accordion"]
+    FE["7. Frontend<br/>Output<br/>Display<br/>flagged/OK<br/>cards<br/>Download<br/>report<br/>Decision log<br/>accordion"]
 
-    DL["8. Decision Log<br/>decisions.jsonl<br/>Append-only audit trail"]
+    DL["8. Decision<br/>Log<br/>decisions.jsonl<br/>Append-only<br/>audit trail"]
 
     H --> S
     S --> OCR
@@ -51,14 +51,14 @@ flowchart TD
     Interpret --> DL
     Msg --> DL
 
-    style H fill:#e1f5e1,stroke:#2e7d32
-    style S fill:#fff3e0,stroke:#f57c00
-    style OCR fill:#e3f2fd,stroke:#1565c0
-    style Split fill:#e3f2fd,stroke:#1565c0
-    style Interpret fill:#fce4ec,stroke:#c2185b
-    style Msg fill:#f3e5f5,stroke:#7b1fa2
-    style FE fill:#e8f5e9,stroke:#2e7d32
-    style DL fill:#ffebee,stroke:#c62828
+    style H fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
+    style S fill:#ffcc80,stroke:#bf360c,stroke-width:2px
+    style OCR fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
+    style Split fill:#bbdefb,stroke:#0d47a1,stroke-width:2px
+    style Interpret fill:#f8bbd0,stroke:#ad1457,stroke-width:2px
+    style Msg fill:#e1bee7,stroke:#4a148c,stroke-width:2px
+    style FE fill:#c8e6c9,stroke:#1b5e20,stroke-width:2px
+    style DL fill:#ffcdd2,stroke:#b71c1c,stroke-width:2px
 ```
 
 ---
